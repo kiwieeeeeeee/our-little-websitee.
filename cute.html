@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awww... I knew it! 💘</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .big{ font-size:clamp(26px, 6.5vw, 64px); margin:0 0 12px }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div>
+      <h1 class="big glow">Awww… you so cute… I KNEW IT!!!</h1>
+      <p class="lead">Okay okay, now come see something special 👉</p>
+      <button class="btn" onclick="go()">Continue</button>
+      <p class="small">Auto-redirecting in a moment…</p>
+    </div>
+  </div>
+  <div class="bg-stars"></div>
+  <script src="script.js"></script>
+  <script>
+    Site.spawnHearts(22);
+    function go(){ window.location.href = 'gallery.html'; }
+    setTimeout(go, 3500);
+  </script>
+</body>
+</html>

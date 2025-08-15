@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do you love me? 💞</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .wrap{ display:grid; place-items:center; min-height:100vh; text-align:center; padding:24px }
+    .q{ font-size:clamp(26px, 6vw, 60px); margin-bottom:22px }
+    .btns{ position:relative; height:160px }
+    .btn-yes{ }
+    .btn-no{ position:absolute; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <div class="q glow">Do you love me? 🥺</div>
+      <div class="btns">
+        <button class="btn btn-yes" id="yes">Yes</button>
+        <button class="btn ghost btn-no" id="no" style="left:120px">No</button>
+      </div>
+      <p class="small">be honest 😚</p>
+    </div>
+  </div>
+  <div class="bg-stars"></div>
+  <script>
+    function rand(min,max){ return Math.random()*(max-min)+min }
+    const no = document.getElementById('no');
+    function moveNo(){
+      const x = rand(0, 80); const y = rand(-10, 60);
+      no.style.left = x + 'vw';
+      no.style.top = y + 'vh';
+    }
+    no.addEventListener('mouseover', moveNo);
+    no.addEventListener('click', moveNo);
+    document.getElementById('yes').addEventListener('click', ()=>{
+      window.location.href = 'cute.html';
+    });
+  </script>
+</body>
+</html>
